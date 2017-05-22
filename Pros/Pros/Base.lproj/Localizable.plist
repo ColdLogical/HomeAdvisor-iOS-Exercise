@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>details.button.call.title</key>
+	<dict>
+		<key>value</key>
+		<string>CALL</string>
+		<key>comment</key>
+		<string>Label for call button</string>
+	</dict>
+	<key>details.button.email.title</key>
+	<dict>
+		<key>value</key>
+		<string>EMAIL</string>
+		<key>comment</key>
+		<string>Label for email button</string>
+	</dict>
+	<key>details.title</key>
+	<dict>
+		<key>value</key>
+		<string>Details</string>
+		<key>comment</key>
+		<string>Pro details view controller title</string>
+	</dict>
+	<key>list.rating.format</key>
+	<dict>
+		<key>value</key>
+		<string>Rating: %@ </string>
+		<key>comment</key>
+		<string>Label format for rating value</string>
+	</dict>
+	<key>list.rating-count.format</key>
+	<dict>
+		<key>value</key>
+		<string>%@ rating(s)</string>
+		<key>comment</key>
+		<string>Label format for number of ratings</string>
+	</dict>
+	<key>list.references-available</key>
+	<dict>
+		<key>value</key>
+		<string>References Available</string>
+		<key>comment</key>
+		<string>Label for references available information</string>
+	</dict>
+	<key>list.title</key>
+	<dict>
+		<key>value</key>
+		<string>Pros</string>
+		<key>comment</key>
+		<string>Pros list view controller title</string>
+	</dict>
+</dict>
+</plist>
