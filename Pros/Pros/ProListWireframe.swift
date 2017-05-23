@@ -47,15 +47,6 @@ class ProListWireframe {
 
 // MARK: - Module Interface
 extension ProListWireframe: ProList {
-        var delegate: ProListDelegate? {
-                get {
-                        return presenter.delegate
-                }
-                set {
-                        presenter.set(delegate: newValue)
-                }
-        }
-
         func present(inWindow window: UIWindow) {
                 window.rootViewController = moduleNavigationController
                 presenter.beganPresenting()

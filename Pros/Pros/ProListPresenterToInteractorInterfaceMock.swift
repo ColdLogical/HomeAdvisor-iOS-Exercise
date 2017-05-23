@@ -7,5 +7,7 @@ class ProListPresenterToInteractorInterfaceMock {
 }
 
 extension ProListPresenterToInteractorInterfaceMock: ProListPresenterToInteractorInterface {
-
+        func getPros() {
+                functionsCalled.append(#function)
+        }
 }

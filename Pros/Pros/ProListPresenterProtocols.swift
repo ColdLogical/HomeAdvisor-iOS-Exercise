@@ -5,18 +5,16 @@ protocol ProListDelegate: class {
 
 // VIPER Interface for communication from Interactor -> Presenter
 protocol ProListInteractorToPresenterInterface: class {
-
+        func failedGettingPros(withError error: Error)
+        func successGetting(pros: [Pro])
 }
 
 // VIPER Interface for communication from View -> Presenter
 protocol ProListViewToPresenterInterface: class {
-
+        func userSelected(proViewObject: ProViewObject)
 }
 
 // VIPER Interface for communication from Wireframe -> Presenter
 protocol ProListWireframeToPresenterInterface: class {
-        weak var delegate: ProListDelegate? { get }
-        func set(delegate newDelegate: ProListDelegate?)
-
         func beganPresenting()
 }

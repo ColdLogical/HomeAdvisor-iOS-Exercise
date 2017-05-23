@@ -26,7 +26,7 @@
 	<key>list.rating.format</key>
 	<dict>
 		<key>value</key>
-		<string>Rating: %@ </string>
+		<string>Rating: %@</string>
 		<key>comment</key>
 		<string>Label format for rating value</string>
 	</dict>

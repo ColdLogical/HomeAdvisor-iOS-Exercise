@@ -9,8 +9,6 @@ struct ProListConstants {
 
 // Interface Abstraction for working with the VIPER Module
 protocol ProList: class {
-        var delegate: ProListDelegate? { get set }
-
         func present(inWindow window: UIWindow)
 }
 

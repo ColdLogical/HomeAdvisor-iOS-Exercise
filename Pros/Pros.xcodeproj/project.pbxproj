@@ -7,12 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01229B991ED4D12000CE3272 /* ProCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229B981ED4D12000CE3272 /* ProCell.swift */; };
+		01229B9B1ED4E6E600CE3272 /* XCUIElement+ScrollToElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229B9A1ED4E6E600CE3272 /* XCUIElement+ScrollToElement.swift */; };
+		01229B9D1ED4E8F700CE3272 /* ProListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229B9C1ED4E8F700CE3272 /* ProListUITests.swift */; };
+		01229B9F1ED4E9FD00CE3272 /* ProDetailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229B9E1ED4E9FD00CE3272 /* ProDetailsUITests.swift */; };
+		01229BA21ED4ED7600CE3272 /* ProCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BA01ED4ED7200CE3272 /* ProCellTests.swift */; };
+		01229BB01ED4F1A100CE3272 /* ProDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01229BA71ED4F1A100CE3272 /* ProDetails.storyboard */; };
+		01229BB11ED4F1A100CE3272 /* ProDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BA81ED4F1A100CE3272 /* ProDetailsInteractor.swift */; };
+		01229BB21ED4F1A100CE3272 /* ProDetailsInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BA91ED4F1A100CE3272 /* ProDetailsInteractorProtocols.swift */; };
+		01229BB31ED4F1A100CE3272 /* ProDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BAA1ED4F1A100CE3272 /* ProDetailsPresenter.swift */; };
+		01229BB41ED4F1A100CE3272 /* ProDetailsPresenterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BAB1ED4F1A100CE3272 /* ProDetailsPresenterProtocols.swift */; };
+		01229BB51ED4F1A100CE3272 /* ProDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BAC1ED4F1A100CE3272 /* ProDetailsView.swift */; };
+		01229BB61ED4F1A100CE3272 /* ProDetailsViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BAD1ED4F1A100CE3272 /* ProDetailsViewProtocols.swift */; };
+		01229BB71ED4F1A100CE3272 /* ProDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BAE1ED4F1A100CE3272 /* ProDetailsWireframe.swift */; };
+		01229BB81ED4F1A100CE3272 /* ProDetailsWireframeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BAF1ED4F1A100CE3272 /* ProDetailsWireframeProtocols.swift */; };
+		01229BC61ED4F1AF00CE3272 /* ProDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BBA1ED4F1AF00CE3272 /* ProDetailsInteractorTests.swift */; };
+		01229BC71ED4F1AF00CE3272 /* ProDetailsInteractorToPresenterInterfaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BBB1ED4F1AF00CE3272 /* ProDetailsInteractorToPresenterInterfaceMock.swift */; };
+		01229BC81ED4F1AF00CE3272 /* ProDetailsNavigationInterfaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BBC1ED4F1AF00CE3272 /* ProDetailsNavigationInterfaceMock.swift */; };
+		01229BC91ED4F1AF00CE3272 /* ProDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BBD1ED4F1AF00CE3272 /* ProDetailsPresenterTests.swift */; };
+		01229BCA1ED4F1AF00CE3272 /* ProDetailsPresenterToInteractorInterfaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BBE1ED4F1AF00CE3272 /* ProDetailsPresenterToInteractorInterfaceMock.swift */; };
+		01229BCB1ED4F1AF00CE3272 /* ProDetailsPresenterToViewInterfaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BBF1ED4F1AF00CE3272 /* ProDetailsPresenterToViewInterfaceMock.swift */; };
+		01229BCC1ED4F1AF00CE3272 /* ProDetailsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BC01ED4F1AF00CE3272 /* ProDetailsViewTests.swift */; };
+		01229BCD1ED4F1AF00CE3272 /* ProDetailsViewToPresenterInterfaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BC11ED4F1AF00CE3272 /* ProDetailsViewToPresenterInterfaceMock.swift */; };
+		01229BCE1ED4F1AF00CE3272 /* ProDetailsWireframeInterfacesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BC21ED4F1AF00CE3272 /* ProDetailsWireframeInterfacesMock.swift */; };
+		01229BCF1ED4F1AF00CE3272 /* ProDetailsWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BC31ED4F1AF00CE3272 /* ProDetailsWireframeTests.swift */; };
+		01229BD01ED4F1AF00CE3272 /* ProDetailsWireframeToPresenterInterfaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01229BC41ED4F1AF00CE3272 /* ProDetailsWireframeToPresenterInterfaceMock.swift */; };
+		013BC61D1ED4C0C60018F313 /* ProsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013BC61B1ED4C0A90018F313 /* ProsServiceMock.swift */; };
 		0168F9C21ED3635B00AC45EB /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0168F9C61ED3635B00AC45EB /* Localizable.plist */; };
 		0168F9CE1ED3669100AC45EB /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168F9CD1ED3669100AC45EB /* String+Localized.swift */; };
 		0168F9D31ED36E2A00AC45EB /* Pro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168F9D21ED36E2A00AC45EB /* Pro.swift */; };
-		0168F9D41ED36E2A00AC45EB /* Pro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168F9D21ED36E2A00AC45EB /* Pro.swift */; };
-		0168F9D51ED36E2A00AC45EB /* Pro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168F9D21ED36E2A00AC45EB /* Pro.swift */; };
 		01AD4DBA1ED3721300BEE589 /* ProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD4DB91ED3721300BEE589 /* ProTests.swift */; };
+		01BDE8621ED4C90F002E1F52 /* ProViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BDE8611ED4C90F002E1F52 /* ProViewObject.swift */; };
 		01C9C3B11ED37CE600E8C7A1 /* ProList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C9C3A81ED37CE600E8C7A1 /* ProList.storyboard */; };
 		01C9C3B21ED37CE600E8C7A1 /* ProListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9C3A91ED37CE600E8C7A1 /* ProListInteractor.swift */; };
 		01C9C3B31ED37CE600E8C7A1 /* ProListInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9C3AA1ED37CE600E8C7A1 /* ProListInteractorProtocols.swift */; };
@@ -22,7 +47,6 @@
 		01C9C3B71ED37CE600E8C7A1 /* ProListViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9C3AE1ED37CE600E8C7A1 /* ProListViewProtocols.swift */; };
 		01C9C3B81ED37CE600E8C7A1 /* ProListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9C3AF1ED37CE600E8C7A1 /* ProListWireframe.swift */; };
 		01C9C3B91ED37CE600E8C7A1 /* ProListWireframeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9C3B01ED37CE600E8C7A1 /* ProListWireframeProtocols.swift */; };
-		01C9C3C61ED37CF300E8C7A1 /* ProListDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9C3BA1ED37CF300E8C7A1 /* ProListDelegateMock.swift */; };
 		01C9C3C71ED37CF300E8C7A1 /* ProListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9C3BB1ED37CF300E8C7A1 /* ProListInteractorTests.swift */; };
 		01C9C3C81ED37CF300E8C7A1 /* ProListInteractorToPresenterInterfaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9C3BC1ED37CF300E8C7A1 /* ProListInteractorToPresenterInterfaceMock.swift */; };
 		01C9C3C91ED37CF300E8C7A1 /* ProListNavigationInterfaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9C3BD1ED37CF300E8C7A1 /* ProListNavigationInterfaceMock.swift */; };
@@ -38,6 +62,9 @@
 		01CCC6081ED3598100AD367C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CCC6071ED3598100AD367C /* Assets.xcassets */; };
 		01CCC60B1ED3598100AD367C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CCC6091ED3598100AD367C /* LaunchScreen.storyboard */; };
 		01CCC6211ED3598100AD367C /* ProsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCC6201ED3598100AD367C /* ProsUITests.swift */; };
+		01FEC3EF1ED4ACFB002A3CEC /* JSONFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FEC3EE1ED4ACFB002A3CEC /* JSONFileManager.swift */; };
+		01FEC3F11ED4ADB4002A3CEC /* pro_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 01FEC3F01ED4ADB4002A3CEC /* pro_data.json */; };
+		01FEC3F41ED4BA14002A3CEC /* ProsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FEC3F31ED4BA14002A3CEC /* ProsService.swift */; };
 		634CA174E1C64368A9E19F04 /* Pods_Pros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1BB6878EA834CF10E2126F /* Pods_Pros.framework */; };
 		74AF072C9F6282789D9D9442 /* Pods_ProsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5917D76E0A11926053DE7 /* Pods_ProsTests.framework */; };
 		A90E58853BC4F27857BE2D15 /* Pods_ProsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D92024B118ED27D01DC413B /* Pods_ProsUITests.framework */; };
@@ -61,10 +88,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01229B981ED4D12000CE3272 /* ProCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProCell.swift; sourceTree = "<group>"; };
+		01229B9A1ED4E6E600CE3272 /* XCUIElement+ScrollToElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+ScrollToElement.swift"; sourceTree = "<group>"; };
+		01229B9C1ED4E8F700CE3272 /* ProListUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProListUITests.swift; sourceTree = "<group>"; };
+		01229B9E1ED4E9FD00CE3272 /* ProDetailsUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsUITests.swift; sourceTree = "<group>"; };
+		01229BA01ED4ED7200CE3272 /* ProCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProCellTests.swift; sourceTree = "<group>"; };
+		01229BA71ED4F1A100CE3272 /* ProDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProDetails.storyboard; sourceTree = "<group>"; };
+		01229BA81ED4F1A100CE3272 /* ProDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsInteractor.swift; sourceTree = "<group>"; };
+		01229BA91ED4F1A100CE3272 /* ProDetailsInteractorProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsInteractorProtocols.swift; sourceTree = "<group>"; };
+		01229BAA1ED4F1A100CE3272 /* ProDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsPresenter.swift; sourceTree = "<group>"; };
+		01229BAB1ED4F1A100CE3272 /* ProDetailsPresenterProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsPresenterProtocols.swift; sourceTree = "<group>"; };
+		01229BAC1ED4F1A100CE3272 /* ProDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsView.swift; sourceTree = "<group>"; };
+		01229BAD1ED4F1A100CE3272 /* ProDetailsViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsViewProtocols.swift; sourceTree = "<group>"; };
+		01229BAE1ED4F1A100CE3272 /* ProDetailsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsWireframe.swift; sourceTree = "<group>"; };
+		01229BAF1ED4F1A100CE3272 /* ProDetailsWireframeProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsWireframeProtocols.swift; sourceTree = "<group>"; };
+		01229BBA1ED4F1AF00CE3272 /* ProDetailsInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsInteractorTests.swift; sourceTree = "<group>"; };
+		01229BBB1ED4F1AF00CE3272 /* ProDetailsInteractorToPresenterInterfaceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsInteractorToPresenterInterfaceMock.swift; sourceTree = "<group>"; };
+		01229BBC1ED4F1AF00CE3272 /* ProDetailsNavigationInterfaceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsNavigationInterfaceMock.swift; sourceTree = "<group>"; };
+		01229BBD1ED4F1AF00CE3272 /* ProDetailsPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		01229BBE1ED4F1AF00CE3272 /* ProDetailsPresenterToInteractorInterfaceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsPresenterToInteractorInterfaceMock.swift; sourceTree = "<group>"; };
+		01229BBF1ED4F1AF00CE3272 /* ProDetailsPresenterToViewInterfaceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsPresenterToViewInterfaceMock.swift; sourceTree = "<group>"; };
+		01229BC01ED4F1AF00CE3272 /* ProDetailsViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsViewTests.swift; sourceTree = "<group>"; };
+		01229BC11ED4F1AF00CE3272 /* ProDetailsViewToPresenterInterfaceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsViewToPresenterInterfaceMock.swift; sourceTree = "<group>"; };
+		01229BC21ED4F1AF00CE3272 /* ProDetailsWireframeInterfacesMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsWireframeInterfacesMock.swift; sourceTree = "<group>"; };
+		01229BC31ED4F1AF00CE3272 /* ProDetailsWireframeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsWireframeTests.swift; sourceTree = "<group>"; };
+		01229BC41ED4F1AF00CE3272 /* ProDetailsWireframeToPresenterInterfaceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsWireframeToPresenterInterfaceMock.swift; sourceTree = "<group>"; };
+		013BC61B1ED4C0A90018F313 /* ProsServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProsServiceMock.swift; sourceTree = "<group>"; };
 		0168F9C51ED3635B00AC45EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Localizable.plist; sourceTree = "<group>"; };
 		0168F9CD1ED3669100AC45EB /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		0168F9D21ED36E2A00AC45EB /* Pro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pro.swift; sourceTree = "<group>"; };
 		01AD4DB91ED3721300BEE589 /* ProTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProTests.swift; sourceTree = "<group>"; };
+		01BDE8611ED4C90F002E1F52 /* ProViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProViewObject.swift; sourceTree = "<group>"; };
 		01C9C3A81ED37CE600E8C7A1 /* ProList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProList.storyboard; sourceTree = "<group>"; };
 		01C9C3A91ED37CE600E8C7A1 /* ProListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProListInteractor.swift; sourceTree = "<group>"; };
 		01C9C3AA1ED37CE600E8C7A1 /* ProListInteractorProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProListInteractorProtocols.swift; sourceTree = "<group>"; };
@@ -74,7 +128,6 @@
 		01C9C3AE1ED37CE600E8C7A1 /* ProListViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProListViewProtocols.swift; sourceTree = "<group>"; };
 		01C9C3AF1ED37CE600E8C7A1 /* ProListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProListWireframe.swift; sourceTree = "<group>"; };
 		01C9C3B01ED37CE600E8C7A1 /* ProListWireframeProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProListWireframeProtocols.swift; sourceTree = "<group>"; };
-		01C9C3BA1ED37CF300E8C7A1 /* ProListDelegateMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProListDelegateMock.swift; sourceTree = "<group>"; };
 		01C9C3BB1ED37CF300E8C7A1 /* ProListInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProListInteractorTests.swift; sourceTree = "<group>"; };
 		01C9C3BC1ED37CF300E8C7A1 /* ProListInteractorToPresenterInterfaceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProListInteractorToPresenterInterfaceMock.swift; sourceTree = "<group>"; };
 		01C9C3BD1ED37CF300E8C7A1 /* ProListNavigationInterfaceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProListNavigationInterfaceMock.swift; sourceTree = "<group>"; };
@@ -96,6 +149,9 @@
 		01CCC61C1ED3598100AD367C /* ProsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CCC6201ED3598100AD367C /* ProsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProsUITests.swift; sourceTree = "<group>"; };
 		01CCC6221ED3598100AD367C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01FEC3EE1ED4ACFB002A3CEC /* JSONFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFileManager.swift; sourceTree = "<group>"; };
+		01FEC3F01ED4ADB4002A3CEC /* pro_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pro_data.json; sourceTree = "<group>"; };
+		01FEC3F31ED4BA14002A3CEC /* ProsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProsService.swift; sourceTree = "<group>"; };
 		0D1BB6878EA834CF10E2126F /* Pods_Pros.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pros.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D92024B118ED27D01DC413B /* Pods_ProsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21571DD0E301ACF8A7D6BDEA /* Pods-ProsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProsUITests/Pods-ProsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +191,119 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01229BA31ED4F0FF00CE3272 /* Pro Details */ = {
+			isa = PBXGroup;
+			children = (
+				01229BD21ED4F21300CE3272 /* Data Logic */,
+				01229BD11ED4F20C00CE3272 /* Routing */,
+				01229BD61ED4F24700CE3272 /* User Interface */,
+			);
+			name = "Pro Details";
+			sourceTree = "<group>";
+		};
+		01229BA41ED4F11E00CE3272 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				01CCC6001ED3598100AD367C /* AppDelegate.swift */,
+				01CCC6071ED3598100AD367C /* Assets.xcassets */,
+				01CCC60C1ED3598100AD367C /* Info.plist */,
+				01CCC6091ED3598100AD367C /* LaunchScreen.storyboard */,
+				0168F9C61ED3635B00AC45EB /* Localizable.plist */,
+				01FEC3F01ED4ADB4002A3CEC /* pro_data.json */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		01229BA51ED4F14900CE3272 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				01229B9A1ED4E6E600CE3272 /* XCUIElement+ScrollToElement.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		01229BA61ED4F15200CE3272 /* UI Tests */ = {
+			isa = PBXGroup;
+			children = (
+				01229B9E1ED4E9FD00CE3272 /* ProDetailsUITests.swift */,
+				01229B9C1ED4E8F700CE3272 /* ProListUITests.swift */,
+			);
+			name = "UI Tests";
+			sourceTree = "<group>";
+		};
+		01229BD11ED4F20C00CE3272 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				01229BAA1ED4F1A100CE3272 /* ProDetailsPresenter.swift */,
+				01229BBD1ED4F1AF00CE3272 /* ProDetailsPresenterTests.swift */,
+				01229BAB1ED4F1A100CE3272 /* ProDetailsPresenterProtocols.swift */,
+				01229BD41ED4F23600CE3272 /* Presenter Mocks */,
+				01229BAE1ED4F1A100CE3272 /* ProDetailsWireframe.swift */,
+				01229BC31ED4F1AF00CE3272 /* ProDetailsWireframeTests.swift */,
+				01229BAF1ED4F1A100CE3272 /* ProDetailsWireframeProtocols.swift */,
+				01229BD51ED4F23F00CE3272 /* Wireframe Mocks */,
+			);
+			name = Routing;
+			sourceTree = "<group>";
+		};
+		01229BD21ED4F21300CE3272 /* Data Logic */ = {
+			isa = PBXGroup;
+			children = (
+				01229BA81ED4F1A100CE3272 /* ProDetailsInteractor.swift */,
+				01229BBA1ED4F1AF00CE3272 /* ProDetailsInteractorTests.swift */,
+				01229BA91ED4F1A100CE3272 /* ProDetailsInteractorProtocols.swift */,
+				01229BD31ED4F21B00CE3272 /* Interactor Mocks */,
+			);
+			name = "Data Logic";
+			sourceTree = "<group>";
+		};
+		01229BD31ED4F21B00CE3272 /* Interactor Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				01229BBB1ED4F1AF00CE3272 /* ProDetailsInteractorToPresenterInterfaceMock.swift */,
+			);
+			name = "Interactor Mocks";
+			sourceTree = "<group>";
+		};
+		01229BD41ED4F23600CE3272 /* Presenter Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				01229BBE1ED4F1AF00CE3272 /* ProDetailsPresenterToInteractorInterfaceMock.swift */,
+				01229BBF1ED4F1AF00CE3272 /* ProDetailsPresenterToViewInterfaceMock.swift */,
+			);
+			name = "Presenter Mocks";
+			sourceTree = "<group>";
+		};
+		01229BD51ED4F23F00CE3272 /* Wireframe Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				01229BBC1ED4F1AF00CE3272 /* ProDetailsNavigationInterfaceMock.swift */,
+				01229BC21ED4F1AF00CE3272 /* ProDetailsWireframeInterfacesMock.swift */,
+				01229BC41ED4F1AF00CE3272 /* ProDetailsWireframeToPresenterInterfaceMock.swift */,
+			);
+			name = "Wireframe Mocks";
+			sourceTree = "<group>";
+		};
+		01229BD61ED4F24700CE3272 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				01229BAC1ED4F1A100CE3272 /* ProDetailsView.swift */,
+				01229BC01ED4F1AF00CE3272 /* ProDetailsViewTests.swift */,
+				01229BAD1ED4F1A100CE3272 /* ProDetailsViewProtocols.swift */,
+				01229BD71ED4F25100CE3272 /* View Mocks */,
+				01229BA71ED4F1A100CE3272 /* ProDetails.storyboard */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		01229BD71ED4F25100CE3272 /* View Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				01229BC11ED4F1AF00CE3272 /* ProDetailsViewToPresenterInterfaceMock.swift */,
+			);
+			name = "View Mocks";
+			sourceTree = "<group>";
+		};
 		0168F9CC1ED3668400AC45EB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +334,6 @@
 		01C9C3D21ED37D2000E8C7A1 /* Presenter Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				01C9C3BA1ED37CF300E8C7A1 /* ProListDelegateMock.swift */,
 				01C9C3BF1ED37CF300E8C7A1 /* ProListPresenterToInteractorInterfaceMock.swift */,
 				01C9C3C01ED37CF300E8C7A1 /* ProListPresenterToViewInterfaceMock.swift */,
 			);
@@ -199,7 +367,7 @@
 		01C9C3D51ED37D3300E8C7A1 /* Interaector Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				01C9C3AA1ED37CE600E8C7A1 /* ProListInteractorProtocols.swift */,
+				01C9C3BC1ED37CF300E8C7A1 /* ProListInteractorToPresenterInterfaceMock.swift */,
 			);
 			name = "Interaector Mocks";
 			sourceTree = "<group>";
@@ -209,7 +377,7 @@
 			children = (
 				01C9C3A91ED37CE600E8C7A1 /* ProListInteractor.swift */,
 				01C9C3BB1ED37CF300E8C7A1 /* ProListInteractorTests.swift */,
-				01C9C3BC1ED37CF300E8C7A1 /* ProListInteractorToPresenterInterfaceMock.swift */,
+				01C9C3AA1ED37CE600E8C7A1 /* ProListInteractorProtocols.swift */,
 				01C9C3D51ED37D3300E8C7A1 /* Interaector Mocks */,
 			);
 			name = "Data Logic";
@@ -223,6 +391,9 @@
 				01C9C3AE1ED37CE600E8C7A1 /* ProListViewProtocols.swift */,
 				01C9C3D81ED37D5400E8C7A1 /* View Mocks */,
 				01C9C3A81ED37CE600E8C7A1 /* ProList.storyboard */,
+				01BDE8611ED4C90F002E1F52 /* ProViewObject.swift */,
+				01229B981ED4D12000CE3272 /* ProCell.swift */,
+				01229BA01ED4ED7200CE3272 /* ProCellTests.swift */,
 			);
 			name = "User Interface";
 			sourceTree = "<group>";
@@ -263,12 +434,11 @@
 			children = (
 				01AD4DBB1ED3739800BEE589 /* Entities */,
 				0168F9CC1ED3668400AC45EB /* Extensions */,
+				01229BA31ED4F0FF00CE3272 /* Pro Details */,
 				01C9C3A71ED37CCB00E8C7A1 /* Pro List */,
-				01CCC6001ED3598100AD367C /* AppDelegate.swift */,
-				01CCC6071ED3598100AD367C /* Assets.xcassets */,
-				01CCC6091ED3598100AD367C /* LaunchScreen.storyboard */,
-				01CCC60C1ED3598100AD367C /* Info.plist */,
-				0168F9C61ED3635B00AC45EB /* Localizable.plist */,
+				01FEC3F21ED4BA01002A3CEC /* Services */,
+				01FEC3ED1ED4ACCA002A3CEC /* Utilities */,
+				01229BA41ED4F11E00CE3272 /* Support Files */,
 			);
 			path = Pros;
 			sourceTree = "<group>";
@@ -285,9 +455,28 @@
 			isa = PBXGroup;
 			children = (
 				01CCC6201ED3598100AD367C /* ProsUITests.swift */,
+				01229BA51ED4F14900CE3272 /* Extensions */,
+				01229BA61ED4F15200CE3272 /* UI Tests */,
 				01CCC6221ED3598100AD367C /* Info.plist */,
 			);
 			path = ProsUITests;
+			sourceTree = "<group>";
+		};
+		01FEC3ED1ED4ACCA002A3CEC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				01FEC3EE1ED4ACFB002A3CEC /* JSONFileManager.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		01FEC3F21ED4BA01002A3CEC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				01FEC3F31ED4BA14002A3CEC /* ProsService.swift */,
+				013BC61B1ED4C0A90018F313 /* ProsServiceMock.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		10D77827E42BFAD5EE582C19 /* Frameworks */ = {
@@ -430,10 +619,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01FEC3F11ED4ADB4002A3CEC /* pro_data.json in Resources */,
 				01CCC60B1ED3598100AD367C /* LaunchScreen.storyboard in Resources */,
 				0168F9C21ED3635B00AC45EB /* Localizable.plist in Resources */,
 				01CCC6081ED3598100AD367C /* Assets.xcassets in Resources */,
 				01C9C3B11ED37CE600E8C7A1 /* ProList.storyboard in Resources */,
+				01229BB01ED4F1A100CE3272 /* ProDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,12 +805,24 @@
 				01C9C3B41ED37CE600E8C7A1 /* ProListPresenter.swift in Sources */,
 				01C9C3B71ED37CE600E8C7A1 /* ProListViewProtocols.swift in Sources */,
 				0168F9D31ED36E2A00AC45EB /* Pro.swift in Sources */,
+				01229BB21ED4F1A100CE3272 /* ProDetailsInteractorProtocols.swift in Sources */,
+				01FEC3EF1ED4ACFB002A3CEC /* JSONFileManager.swift in Sources */,
+				01229BB31ED4F1A100CE3272 /* ProDetailsPresenter.swift in Sources */,
 				01C9C3B91ED37CE600E8C7A1 /* ProListWireframeProtocols.swift in Sources */,
+				01229BB11ED4F1A100CE3272 /* ProDetailsInteractor.swift in Sources */,
 				01C9C3B81ED37CE600E8C7A1 /* ProListWireframe.swift in Sources */,
 				01C9C3B51ED37CE600E8C7A1 /* ProListPresenterProtocols.swift in Sources */,
+				01229B991ED4D12000CE3272 /* ProCell.swift in Sources */,
+				01229BB51ED4F1A100CE3272 /* ProDetailsView.swift in Sources */,
+				01BDE8621ED4C90F002E1F52 /* ProViewObject.swift in Sources */,
+				01FEC3F41ED4BA14002A3CEC /* ProsService.swift in Sources */,
 				01CCC6011ED3598100AD367C /* AppDelegate.swift in Sources */,
+				01229BB81ED4F1A100CE3272 /* ProDetailsWireframeProtocols.swift in Sources */,
+				01229BB41ED4F1A100CE3272 /* ProDetailsPresenterProtocols.swift in Sources */,
+				01229BB61ED4F1A100CE3272 /* ProDetailsViewProtocols.swift in Sources */,
 				01C9C3B31ED37CE600E8C7A1 /* ProListInteractorProtocols.swift in Sources */,
 				0168F9CE1ED3669100AC45EB /* String+Localized.swift in Sources */,
+				01229BB71ED4F1A100CE3272 /* ProDetailsWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,19 +831,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				01C9C3D11ED37CF300E8C7A1 /* ProListWireframeToPresenterInterfaceMock.swift in Sources */,
+				01229BC61ED4F1AF00CE3272 /* ProDetailsInteractorTests.swift in Sources */,
+				01229BC81ED4F1AF00CE3272 /* ProDetailsNavigationInterfaceMock.swift in Sources */,
+				01229BA21ED4ED7600CE3272 /* ProCellTests.swift in Sources */,
 				01C9C3CB1ED37CF300E8C7A1 /* ProListPresenterToInteractorInterfaceMock.swift in Sources */,
+				01229BD01ED4F1AF00CE3272 /* ProDetailsWireframeToPresenterInterfaceMock.swift in Sources */,
+				01229BCC1ED4F1AF00CE3272 /* ProDetailsViewTests.swift in Sources */,
 				01C9C3C81ED37CF300E8C7A1 /* ProListInteractorToPresenterInterfaceMock.swift in Sources */,
 				01C9C3CE1ED37CF300E8C7A1 /* ProListViewToPresenterInterfaceMock.swift in Sources */,
 				01C9C3CD1ED37CF300E8C7A1 /* ProListViewTests.swift in Sources */,
 				01C9C3CF1ED37CF300E8C7A1 /* ProListWireframeInterfacesMock.swift in Sources */,
 				01C9C3CC1ED37CF300E8C7A1 /* ProListPresenterToViewInterfaceMock.swift in Sources */,
+				01229BCA1ED4F1AF00CE3272 /* ProDetailsPresenterToInteractorInterfaceMock.swift in Sources */,
+				01229BC91ED4F1AF00CE3272 /* ProDetailsPresenterTests.swift in Sources */,
+				01229BCB1ED4F1AF00CE3272 /* ProDetailsPresenterToViewInterfaceMock.swift in Sources */,
 				01C9C3C91ED37CF300E8C7A1 /* ProListNavigationInterfaceMock.swift in Sources */,
+				01229BC71ED4F1AF00CE3272 /* ProDetailsInteractorToPresenterInterfaceMock.swift in Sources */,
 				01C9C3D01ED37CF300E8C7A1 /* ProListWireframeTests.swift in Sources */,
 				01AD4DBA1ED3721300BEE589 /* ProTests.swift in Sources */,
-				01C9C3C61ED37CF300E8C7A1 /* ProListDelegateMock.swift in Sources */,
+				01229BCE1ED4F1AF00CE3272 /* ProDetailsWireframeInterfacesMock.swift in Sources */,
+				01229BCF1ED4F1AF00CE3272 /* ProDetailsWireframeTests.swift in Sources */,
 				01C9C3CA1ED37CF300E8C7A1 /* ProListPresenterTests.swift in Sources */,
 				01C9C3C71ED37CF300E8C7A1 /* ProListInteractorTests.swift in Sources */,
-				0168F9D41ED36E2A00AC45EB /* Pro.swift in Sources */,
+				013BC61D1ED4C0C60018F313 /* ProsServiceMock.swift in Sources */,
+				01229BCD1ED4F1AF00CE3272 /* ProDetailsViewToPresenterInterfaceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,8 +862,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01229B9B1ED4E6E600CE3272 /* XCUIElement+ScrollToElement.swift in Sources */,
+				01229B9D1ED4E8F700CE3272 /* ProListUITests.swift in Sources */,
+				01229B9F1ED4E9FD00CE3272 /* ProDetailsUITests.swift in Sources */,
 				01CCC6211ED3598100AD367C /* ProsUITests.swift in Sources */,
-				0168F9D51ED36E2A00AC45EB /* Pro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

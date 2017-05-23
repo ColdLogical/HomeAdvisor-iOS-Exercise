@@ -4,19 +4,19 @@ import Quick
 @testable import Pros
 
  // swiftlint:disable:next type_body_length
-class ProListWireframeSpec: QuickSpec {
+class ProDetailsWireframeSpec: QuickSpec {
         // swiftlint:disable:next function_body_length
         override func spec() {
-                var wireframe: ProListWireframe!
+                var wireframe: ProDetailsWireframe!
 
-                var presenterMock: ProListWireframeToPresenterInterfaceMock!
-                var viewMock: ProListNavigationInterfaceMock!
+                var presenterMock: ProDetailsWireframeToPresenterInterfaceMock!
+                var viewMock: ProDetailsNavigationInterfaceMock!
 
-                describe("a ProList wireframe") {
+                describe("a ProDetails wireframe") {
                         beforeEach {
-                                wireframe = ProListWireframe()
-                                presenterMock = ProListWireframeToPresenterInterfaceMock()
-                                viewMock = ProListNavigationInterfaceMock()
+                                wireframe = ProDetailsWireframe()
+                                presenterMock = ProDetailsWireframeToPresenterInterfaceMock()
+                                viewMock = ProDetailsNavigationInterfaceMock()
 
                                 wireframe.presenter = presenterMock
                                 wireframe.view = viewMock
@@ -26,7 +26,7 @@ class ProListWireframeSpec: QuickSpec {
                         describe("init function") {
                                 it("instantiates and connect the VIPER stack") {
                                         // Arrange
-                                        wireframe = ProListWireframe()
+                                        wireframe = ProDetailsWireframe()
 
                                         // Act
 
@@ -51,45 +51,22 @@ class ProListWireframeSpec: QuickSpec {
 
                         // MARK: - Class Functions
                         describe("storyboard class function") {
-                                it("returns the storyboard with the ProList storyboard identifier") {
+                                it("returns the storyboard with the ProDetails storyboard identifier") {
                                         // Arrange
-                                        let storyboard = ProListWireframe.storyboard()
+                                        let storyboard = ProDetailsWireframe.storyboard()
 
                                         // Act
 
                                         // Assert
                                         let storyboardName = storyboard.value(forKey: "name") as? String
                                         expect(storyboardName).toNot(beNil())
-                                        expect(storyboardName).to(equal(ProListConstants.storyboardIdentifier))
+                                        expect(storyboardName).to(equal(ProDetailsConstants.storyboardIdentifier))
                                 }
                         }
 
                         // MARK: - Operational
 
                         // MARK: - Module Interface
-                        describe("when told to present in a window") {
-                                it("makes the modules navigation controller the windows root view controller") {
-                                        // Arrange
-                                        let testWindow = UIWindow()
-
-                                        // Act
-                                        wireframe.present(inWindow: testWindow)
-
-                                        // Assert
-                                        expect(testWindow.rootViewController!).to(equal(wireframe.moduleNavigationController))
-                                }
-
-                                it("tells the presenter the module began presenting") {
-                                        // Arrange
-                                        let fakeWindow = UIWindow()
-
-                                        // Act
-                                        wireframe.present(inWindow: fakeWindow)
-
-                                        // Assert
-                                        expect(presenterMock.functionsCalled).to(contain("beganPresenting()"))
-                                }
-                        }
 
                         // MARK: - Presenter to Wireframe Interface
                 }
