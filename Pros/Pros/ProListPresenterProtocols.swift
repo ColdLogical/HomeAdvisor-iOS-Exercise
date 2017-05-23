@@ -11,7 +11,7 @@ protocol ProListInteractorToPresenterInterface: class {
 
 // VIPER Interface for communication from View -> Presenter
 protocol ProListViewToPresenterInterface: class {
-        func userSelected(proViewObject: ProViewObject)
+        func userSelected(proListViewObject: ProListViewObject)
 }
 
 // VIPER Interface for communication from Wireframe -> Presenter

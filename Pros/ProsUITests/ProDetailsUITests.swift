@@ -23,18 +23,27 @@ extension ProsUITests {
 // MARK: - Thens
 extension ProsUITests {
         func thenShouldBeACallButton() {
+                // Arrange
+                let buttons = app.buttons
+
                 // Assert
-                expect(app.buttons["CALL"].exists).to(beTrue())
+                expect(buttons["CALL"].exists).to(beTrue())
         }
 
         func thenShouldBeAnEmailButton() {
+                // Arrange
+                let buttons = app.buttons
+
                 // Assert
-                expect(app.buttons["EMAIL"].exists).to(beTrue())
+                expect(buttons["EMAIL"].exists).to(beTrue())
         }
 
         func thenShouldHaveTheCorrectTitle() {
+                // Arrange
+                let texts = app.staticTexts
+
                 // Assert
-                expect(app.staticTexts["Details"].exists).to(beTrue())
+                expect(texts["Details"].exists).to(beTrue())
         }
 
         func thenShouldDisplayTheCompanysDetails() {

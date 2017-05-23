@@ -9,7 +9,6 @@ class ProListPresenterSpec: QuickSpec {
         override func spec() {
                 var presenter: ProListPresenter!
 
-                var delegateMock: ProListDelegateMock!
                 var interactorMock: ProListPresenterToInteractorInterfaceMock!
                 var viewMock: ProListPresenterToViewInterfaceMock!
                 var wireframeMock: ProListWireframeInterfacesMock!
@@ -17,29 +16,16 @@ class ProListPresenterSpec: QuickSpec {
                 describe("a ProList presenter") {
                         beforeEach {
                                 presenter = ProListPresenter()
-                                delegateMock = ProListDelegateMock()
                                 interactorMock = ProListPresenterToInteractorInterfaceMock()
                                 viewMock = ProListPresenterToViewInterfaceMock()
                                 wireframeMock = ProListWireframeInterfacesMock()
 
-                                presenter.delegate = delegateMock
                                 presenter.interactor = interactorMock
                                 presenter.view = viewMock
                                 presenter.wireframe = wireframeMock
                         }
 
                         // MARK: - Operational
-                        describe("module wireframe computed variable") {
-                                it("returns the wireframe as a ProList object") {
-                                        // Arrange
-
-                                        // Act
-                                        let moduleWireframe = presenter.moduleWireframe
-
-                                        // Assert
-                                        expect(moduleWireframe).to(beIdenticalTo(wireframeMock))
-                                }
-                        }
 
                         // MARK: - Interactor to Presenter Interface
                         describe("when getting pros fails") {
@@ -51,8 +37,8 @@ class ProListPresenterSpec: QuickSpec {
                                         presenter.failedGettingPros(withError: fakeError)
 
                                         // Assert
-                                        expect(viewMock.functionsCalled).to(contain("show(proViewObjects:)"))
-                                        expect(viewMock.proViewObjects!).to(haveCount(0))
+                                        expect(viewMock.functionsCalled).to(contain("show(proListViewObjects:)"))
+                                        expect(viewMock.proListViewObjects!).to(haveCount(0))
                                 }
                         }
                         describe("when getting pros succeeds") {
@@ -66,28 +52,14 @@ class ProListPresenterSpec: QuickSpec {
                                         presenter.successGetting(pros: testPros)
 
                                         // Assert
-                                        expect(viewMock.functionsCalled).to(contain("show(proViewObjects:)"))
-                                        expect(viewMock.proViewObjects!).to(haveCount(2))
+                                        expect(viewMock.functionsCalled).to(contain("show(proListViewObjects:)"))
+                                        expect(viewMock.proListViewObjects!).to(haveCount(2))
                                 }
                         }
 
                         // MARK: - View to Presenter Interface
 
                         // MARK: - Wireframe to Presenter Interface
-                        describe("set delegate function") {
-                                it("sets the input as the new delegate") {
-                                        // Arrange
-                                        presenter.delegate = nil
-                                        let testDelegate = ProListDelegateMock()
-
-                                        // Act
-                                        presenter.set(delegate: testDelegate)
-
-                                        // Assert
-                                        expect(presenter.delegate).to(beIdenticalTo(testDelegate))
-                                }
-                        }
-
                         describe("when told the module began presenting") {
                                 it("tells the interactor to fetch pros") {
                                         // Arrange

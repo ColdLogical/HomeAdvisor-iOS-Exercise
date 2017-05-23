@@ -44,7 +44,11 @@ extension ProsUITests {
         }
 
         func thenListShouldHaveTheCorrectTitle() {
-                expect(app.staticTexts["Pros"].exists).to(beTrue())
+                // Arrange
+                let texts = app.staticTexts
+
+                // Assert
+                expect(texts["Pros"].exists).to(beTrue())
         }
 
         func thenListShouldShowPros() {

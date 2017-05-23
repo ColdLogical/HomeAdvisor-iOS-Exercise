@@ -4,12 +4,12 @@ class ProListViewToPresenterInterfaceMock {
         var functionsCalled = [String]()
 
         // MARK: - Input Variables
-        var proViewObject: ProViewObject?
+        var proListViewObject: ProListViewObject?
 }
 
 extension ProListViewToPresenterInterfaceMock: ProListViewToPresenterInterface {
-        func userSelected(proViewObject: ProViewObject) {
+        func userSelected(proListViewObject: ProListViewObject) {
                 functionsCalled.append(#function)
-                self.proViewObject = proViewObject
+                self.proListViewObject = proListViewObject
         }
 }

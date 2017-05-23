@@ -26,8 +26,8 @@ class ProListViewSpec: QuickSpec {
                                 it("tells the presenter the user selected the pro") {
                                         // Arrange
                                         let testPro = Pro(withEntityId: "TestId")
-                                        let testProViewObject = ProViewObject(fromPro: testPro)
-                                        view.show(proViewObjects: [ testProViewObject ])
+                                        let testProListViewObject = ProListViewObject(fromPro: testPro)
+                                        view.show(proListViewObjects: [ testProListViewObject ])
 
                                         let testIndexPath = IndexPath(row: 0, section: 0)
 
@@ -35,8 +35,8 @@ class ProListViewSpec: QuickSpec {
                                         view.tableView(view.tableView, didSelectRowAt: testIndexPath)
 
                                         // Assert
-                                        expect(presenterMock.functionsCalled).to(contain("userSelected(proViewObject:)"))
-                                        expect(presenterMock.proViewObject!.entityId).to(equal("TestId"))
+                                        expect(presenterMock.functionsCalled).to(contain("userSelected(proListViewObject:)"))
+                                        expect(presenterMock.proListViewObject!.entityId).to(equal("TestId"))
                                 }
                         }
 
@@ -44,26 +44,26 @@ class ProListViewSpec: QuickSpec {
                         describe("when told to show pros") {
                                 it("sorts them alphabetically") {
                                         // Arrange
-                                        let aPro = Pro(withEntityId: "1")
-                                        pro.companyName = "Ardvark"
-                                        let mPro = Pro(withEntityId: "2")
-                                        pro.companyName = "Mammoth"
-                                        let zPro = Pro(withEntityId: "3")
-                                        pro.companyName = "zebra"
+                                        var aPro = Pro(withEntityId: "1")
+                                        aPro.companyName = "Ardvark"
+                                        var mPro = Pro(withEntityId: "2")
+                                        mPro.companyName = "Mammoth"
+                                        var zPro = Pro(withEntityId: "3")
+                                        zPro.companyName = "zebra"
 
-                                        let testProViewObjects = [
-                                                ProViewObject(fromPro: mPro),
-                                                ProViewObject(fromPro: zPro),
-                                                ProViewObject(fromPro: aPro),
+                                        let testProListViewObjects = [
+                                                ProListViewObject(fromPro: mPro),
+                                                ProListViewObject(fromPro: zPro),
+                                                ProListViewObject(fromPro: aPro),
                                         ]
 
                                         // Act
-                                        view.show(proViewObjects: testProViewObjects)
+                                        view.show(proListViewObjects: testProListViewObjects)
 
                                         // Assert
-                                        expect(view.proViewObjects[0].name).to(equal("Ardvark"))
-                                        expect(view.proViewObjects[1].name).to(equal("Mammoth"))
-                                        expect(view.proViewObjects[2].name).to(equal("zebra"))
+                                        expect(view.proListViewObjects[0].name).to(equal("Ardvark"))
+                                        expect(view.proListViewObjects[1].name).to(equal("Mammoth"))
+                                        expect(view.proListViewObjects[2].name).to(equal("zebra"))
                                 }
                         }
                 }

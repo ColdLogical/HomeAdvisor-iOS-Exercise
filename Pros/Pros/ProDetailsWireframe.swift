@@ -43,7 +43,11 @@ class ProDetailsWireframe {
 
 // MARK: - Module Interface
 extension ProDetailsWireframe: ProDetails {
-
+        func present(onNavigationController navigationController: UINavigationController,
+                     withPro pro: Pro) {
+                navigationController.present(moduleView, animated: true, completion: nil)
+                presenter.beganPresenting(pro: pro)
+        }
 }
 
 // MARK: - Presenter to Wireframe Interface

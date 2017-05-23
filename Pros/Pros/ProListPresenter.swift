@@ -15,25 +15,25 @@ class ProListPresenter {
 // MARK: - Interactor to Presenter Interface
 extension ProListPresenter: ProListInteractorToPresenterInterface {
         func failedGettingPros(withError error: Error) {
-                let emptyViewObjects = [ProViewObject]()
-                view.show(proViewObjects: emptyViewObjects)
+                let emptyViewObjects = [ProListViewObject]()
+                view.show(proListViewObjects: emptyViewObjects)
         }
 
         func successGetting(pros: [Pro]) {
-                var viewObjects = [ProViewObject]()
+                var viewObjects = [ProListViewObject]()
 
                 for pro in pros {
-                        let viewObject = ProViewObject(fromPro: pro)
+                        let viewObject = ProListViewObject(fromPro: pro)
                         viewObjects.append(viewObject)
                 }
 
-                view.show(proViewObjects: viewObjects)
+                view.show(proListViewObjects: viewObjects)
         }
 }
 
 // MARK: - View to Presenter Interface
 extension ProListPresenter: ProListViewToPresenterInterface {
-        func userSelected(proViewObject: ProViewObject) {
+        func userSelected(proListViewObject: ProListViewObject) {
 
         }
 }

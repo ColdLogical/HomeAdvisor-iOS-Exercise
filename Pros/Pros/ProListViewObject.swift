@@ -1,4 +1,4 @@
-struct ProViewObject {
+struct ProListViewObject {
         // MARK: - Identifier
         let entityId: String
 

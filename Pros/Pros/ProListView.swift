@@ -5,7 +5,7 @@ class ProListView: UITableViewController {
         weak var presenter: ProListViewToPresenterInterface!
 
         // MARK: - Instance Variables
-        var proViewObjects = [ProViewObject]()
+        var proListViewObjects = [ProListViewObject]()
 
         // MARK: - Outlets
 
@@ -25,8 +25,8 @@ extension ProListView: ProListNavigationInterface { }
 
 // MARK: - Presenter to View Interface
 extension ProListView: ProListPresenterToViewInterface {
-        func show(proViewObjects: [ProViewObject]) {
-                self.proViewObjects = proViewObjects.sorted {
+        func show(proListViewObjects: [ProListViewObject]) {
+                self.proListViewObjects = proListViewObjects.sorted {
                         guard let firstCompanyName = $0.name else {
                                 return true
                         }
@@ -48,21 +48,21 @@ extension ProListView {
                         return cell
                 }
 
-                let viewObject = proViewObjects[indexPath.row]
+                let viewObject = proListViewObjects[indexPath.row]
                 proCell.pro = viewObject
 
                 return proCell
         }
 
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-                return proViewObjects.count
+                return proListViewObjects.count
         }
 }
 
 // MARK: - UITableView Delegate
 extension ProListView {
         override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-                let viewObject = proViewObjects[indexPath.row]
-                presenter.userSelected(proViewObject: viewObject)
+                let viewObject = proListViewObjects[indexPath.row]
+                presenter.userSelected(proListViewObject: viewObject)
         }
 }

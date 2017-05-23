@@ -4,22 +4,14 @@ class ProDetailsWireframeToPresenterInterfaceMock {
         var functionsCalled = [String]()
 
         // MARK: - Input Variables
-        var modifiedDelegate: ProDetailsDelegate?
+        var pro: Pro?
 
         // MARK: - Output Variables
-        var delegateToReturn: ProDetailsDelegate?
 }
 
 extension ProDetailsWireframeToPresenterInterfaceMock: ProDetailsWireframeToPresenterInterface {
-        weak var delegate: ProDetailsDelegate? {
-                get {
-                        functionsCalled.append(#function)
-                        return delegateToReturn
-                }
-        }
-
-        func set(delegate newDelegate: ProDetailsDelegate?) {
+        func beganPresenting(pro: Pro) {
                 functionsCalled.append(#function)
-                modifiedDelegate = newDelegate
+                self.pro = pro
         }
 }

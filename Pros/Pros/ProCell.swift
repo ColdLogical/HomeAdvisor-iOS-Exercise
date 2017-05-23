@@ -7,7 +7,7 @@ class ProCell: UITableViewCell {
         @IBOutlet var nameLabel: UILabel!
         @IBOutlet var ratingLabel: UILabel!
 
-        var pro: ProViewObject? {
+        var pro: ProListViewObject? {
                 didSet {
                         updateNameLabel()
                         updateRatingLabel()

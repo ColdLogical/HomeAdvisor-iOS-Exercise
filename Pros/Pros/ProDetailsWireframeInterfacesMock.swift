@@ -7,15 +7,7 @@ class ProDetailsWireframeInterfacesMock {
 }
 
 extension ProDetailsWireframeInterfacesMock: ProDetails {
-        var delegate: ProDetailsDelegate? {
-                get {
-                        functionsCalled.append(#function)
-                        return nil
-                }
-            set {
-                functionsCalled.append(#function)
-            }
-        }
+
 }
 
 extension ProDetailsWireframeInterfacesMock: ProDetailsPresenterToWireframeInterface {

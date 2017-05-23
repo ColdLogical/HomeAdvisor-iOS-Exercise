@@ -9,7 +9,6 @@ class ProDetailsPresenterSpec: QuickSpec {
         override func spec() {
                 var presenter: ProDetailsPresenter!
 
-                var delegateMock: ProDetailsDelegateMock!
                 var interactorMock: ProDetailsPresenterToInteractorInterfaceMock!
                 var viewMock: ProDetailsPresenterToViewInterfaceMock!
                 var wireframeMock: ProDetailsWireframeInterfacesMock!
@@ -17,12 +16,10 @@ class ProDetailsPresenterSpec: QuickSpec {
                 describe("a ProDetails presenter") {
                         beforeEach {
                                 presenter = ProDetailsPresenter()
-                                delegateMock = ProDetailsDelegateMock()
                                 interactorMock = ProDetailsPresenterToInteractorInterfaceMock()
                                 viewMock = ProDetailsPresenterToViewInterfaceMock()
                                 wireframeMock = ProDetailsWireframeInterfacesMock()
 
-                                presenter.delegate = delegateMock
                                 presenter.interactor = interactorMock
                                 presenter.view = viewMock
                                 presenter.wireframe = wireframeMock
