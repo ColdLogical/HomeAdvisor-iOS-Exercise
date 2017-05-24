@@ -20,6 +20,7 @@ class ProListWireframe {
         lazy var view: ProListNavigationInterface = self.moduleView
 
         // MARK: - Instance Variables
+        lazy var proDetails: ProDetails = ProDetailsWireframe()
 
         // MARK: - Initialization
         init() {
@@ -55,5 +56,8 @@ extension ProListWireframe: ProList {
 
 // MARK: - Presenter to Wireframe Interface
 extension ProListWireframe: ProListPresenterToWireframeInterface {
-
+        func presentDetails(forPro pro: Pro) {
+                proDetails.present(onNavigationController: moduleNavigationController,
+                                  withPro: pro)
+        }
 }

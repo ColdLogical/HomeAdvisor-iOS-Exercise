@@ -13,7 +13,8 @@ class ProDetailsViewSpec: QuickSpec {
 
                 describe("a ProDetails view") {
                         beforeEach {
-                                view = ProDetailsView()
+                                let sb = ProDetailsWireframe.storyboard()
+                                view = (sb.instantiateViewController(withIdentifier: ProDetailsConstants.viewIdentifier) as? ProDetailsView)!
                                 presenterMock = ProDetailsViewToPresenterInterfaceMock()
 
                                 _ = view.view
@@ -24,6 +25,7 @@ class ProDetailsViewSpec: QuickSpec {
                         // MARK: - Operational
 
                         // MARK: - Presenter to View Interface
+
                 }
         }
 }

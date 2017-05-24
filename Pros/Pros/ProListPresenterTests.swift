@@ -58,6 +58,22 @@ class ProListPresenterSpec: QuickSpec {
                         }
 
                         // MARK: - View to Presenter Interface
+                        describe("when told a user selected a pro") {
+                                it("tells the wireframe to present pro details for the pro") {
+                                        // Arrange
+                                        let testPro = Pro(withEntityId: "TestId")
+                                        let viewObject = ProListViewObject(fromPro: testPro)
+
+                                        presenter.successGetting(pros: [ testPro ])
+
+                                        // Act
+                                        presenter.userSelected(proListViewObject: viewObject)
+
+                                        // Assert
+                                        expect(wireframeMock.functionsCalled).to(contain("presentDetails(forPro:)"))
+                                        expect(wireframeMock.forPro!.entityId).to(equal("TestId"))
+                                }
+                        }
 
                         // MARK: - Wireframe to Presenter Interface
                         describe("when told the module began presenting") {

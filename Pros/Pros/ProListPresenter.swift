@@ -7,6 +7,7 @@ class ProListPresenter {
         weak var wireframe: ProListPresenterToWireframeInterface!
 
         // MARK: - Instance Variables
+        var currentPros: [Pro] = [Pro]()
 
         // MARK: - Operational
 
@@ -20,8 +21,9 @@ extension ProListPresenter: ProListInteractorToPresenterInterface {
         }
 
         func successGetting(pros: [Pro]) {
-                var viewObjects = [ProListViewObject]()
+                currentPros = pros
 
+                var viewObjects = [ProListViewObject]()
                 for pro in pros {
                         let viewObject = ProListViewObject(fromPro: pro)
                         viewObjects.append(viewObject)
@@ -34,7 +36,10 @@ extension ProListPresenter: ProListInteractorToPresenterInterface {
 // MARK: - View to Presenter Interface
 extension ProListPresenter: ProListViewToPresenterInterface {
         func userSelected(proListViewObject: ProListViewObject) {
-
+                guard let pro = currentPros.filter({ $0.entityId == proListViewObject.entityId }).first else {
+                        return
+                }
+                wireframe.presentDetails(forPro: pro)
         }
 }
 

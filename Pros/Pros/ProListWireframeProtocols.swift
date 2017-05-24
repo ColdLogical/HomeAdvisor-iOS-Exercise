@@ -14,5 +14,5 @@ protocol ProList: class {
 
 // VIPER Interface for communication from Presenter -> Wireframe
 protocol ProListPresenterToWireframeInterface: class {
-
+        func presentDetails(forPro pro: Pro)
 }

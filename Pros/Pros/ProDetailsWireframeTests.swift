@@ -67,6 +67,37 @@ class ProDetailsWireframeSpec: QuickSpec {
                         // MARK: - Operational
 
                         // MARK: - Module Interface
+                        describe("when told to present on a navigation controller with a pro") {
+                                it("adds the module's view to the navigation controller") {
+                                        // Arrange
+                                        let fakeWindow = UIWindow(frame: UIScreen.main.bounds)
+                                        fakeWindow.makeKeyAndVisible()
+                                        let testNavController = UINavigationController(rootViewController: UIViewController())
+                                        fakeWindow.rootViewController = testNavController
+                                        let fakePro = Pro(withEntityId: "FakeId")
+
+                                        // Act
+                                        wireframe.present(onNavigationController: testNavController,
+                                                          withPro: fakePro)
+
+                                        // Assert
+                                        expect(testNavController.visibleViewController).toEventually(beIdenticalTo(wireframe.moduleView))
+                                }
+
+                                it("tells the presenter began presenting with the pro") {
+                                        // Arrange
+                                        let fakeNavController = UINavigationController()
+                                        let testPro = Pro(withEntityId: "TestId")
+
+                                        // Act
+                                        wireframe.present(onNavigationController: fakeNavController,
+                                                          withPro: testPro)
+
+                                        // Assert
+                                        expect(presenterMock.functionsCalled).to(contain("beganPresenting(pro:)"))
+                                        expect(presenterMock.pro!.entityId).to(equal(testPro.entityId))
+                                }
+                        }
 
                         // MARK: - Presenter to Wireframe Interface
                 }

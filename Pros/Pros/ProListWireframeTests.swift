@@ -12,14 +12,18 @@ class ProListWireframeSpec: QuickSpec {
                 var presenterMock: ProListWireframeToPresenterInterfaceMock!
                 var viewMock: ProListNavigationInterfaceMock!
 
+                var proDetailsMock: ProDetailsWireframeInterfacesMock!
+
                 describe("a ProList wireframe") {
                         beforeEach {
                                 wireframe = ProListWireframe()
                                 presenterMock = ProListWireframeToPresenterInterfaceMock()
                                 viewMock = ProListNavigationInterfaceMock()
+                                proDetailsMock = ProDetailsWireframeInterfacesMock()
 
                                 wireframe.presenter = presenterMock
                                 wireframe.view = viewMock
+                                wireframe.proDetails = proDetailsMock
                         }
 
                         // MARK: - Init
@@ -92,6 +96,20 @@ class ProListWireframeSpec: QuickSpec {
                         }
 
                         // MARK: - Presenter to Wireframe Interface
+                        describe("when told to present details for a pro") {
+                                it("tells the pro details module to present on the module's navigation controller with the pro") {
+                                        // Arrange
+                                        let testPro = Pro(withEntityId: "TestId")
+
+                                        // Act
+                                        wireframe.presentDetails(forPro: testPro)
+
+                                        // Assert
+                                        expect(proDetailsMock.functionsCalled).to(contain("present(onNavigationController:withPro:)"))
+                                        expect(proDetailsMock.onNavigationController).to(beIdenticalTo(wireframe.moduleNavigationController))
+                                        expect(proDetailsMock.withPro!.entityId).to(equal("TestId"))
+                                }
+                        }
                 }
         }
 }

@@ -6,6 +6,7 @@ class ProListWireframeInterfacesMock {
         var functionsCalled = [String]()
 
         // MARK: - Input Variables
+        var forPro: Pro?
         var inWindow: UIWindow?
 }
 
@@ -27,5 +28,8 @@ extension ProListWireframeInterfacesMock: ProList {
 }
 
 extension ProListWireframeInterfacesMock: ProListPresenterToWireframeInterface {
-
+        func presentDetails(forPro pro: Pro) {
+                functionsCalled.append(#function)
+                forPro = pro
+        }
 }

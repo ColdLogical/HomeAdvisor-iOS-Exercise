@@ -1,3 +1,5 @@
+import UIKit
+
 // VIPER Module Constants
 struct ProDetailsConstants {
         static let storyboardIdentifier = "ProDetails"
@@ -6,7 +8,8 @@ struct ProDetailsConstants {
 
 // Interface Abstraction for working with the VIPER Module
 protocol ProDetails: class {
-
+        func present(onNavigationController navigationController: UINavigationController,
+                     withPro pro: Pro)
 }
 
 // VIPER Interface for communication from Presenter -> Wireframe

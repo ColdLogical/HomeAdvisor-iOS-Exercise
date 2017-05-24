@@ -25,6 +25,7 @@ extension ProDetailsPresenter: ProDetailsViewToPresenterInterface {
 // MARK: - Wireframe to Presenter Interface
 extension ProDetailsPresenter: ProDetailsWireframeToPresenterInterface {
         func beganPresenting(pro: Pro) {
-
+                let viewObject = ProDetailsViewObject(fromPro: pro)
+                view.show(proDetails: viewObject)
         }
 }

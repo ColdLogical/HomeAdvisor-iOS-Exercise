@@ -5,5 +5,5 @@ protocol ProDetailsNavigationInterface: class {
 
 // VIPER Interface for communication from Presenter -> View
 protocol ProDetailsPresenterToViewInterface: class {
-
+        func show(proDetails viewObject: ProDetailsViewObject)
 }

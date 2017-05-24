@@ -45,7 +45,7 @@ class ProDetailsWireframe {
 extension ProDetailsWireframe: ProDetails {
         func present(onNavigationController navigationController: UINavigationController,
                      withPro pro: Pro) {
-                navigationController.present(moduleView, animated: true, completion: nil)
+                navigationController.pushViewController(moduleView, animated: true)
                 presenter.beganPresenting(pro: pro)
         }
 }

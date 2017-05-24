@@ -32,7 +32,19 @@ class ProDetailsPresenterSpec: QuickSpec {
                         // MARK: - View to Presenter Interface
 
                         // MARK: - Wireframe to Presenter Interface
+                        describe("when told began presenting with a pro") {
+                                it("tells the view to show a view object for the pro") {
+                                        // Arrange
+                                        let testPro = Pro(withEntityId: "TestId")
 
+                                        // Act
+                                        presenter.beganPresenting(pro: testPro)
+
+                                        // Assert
+                                        expect(viewMock.functionsCalled).to(contain("show(proDetails:)"))
+                                        expect(viewMock.proDetails!.entityId).to(equal("TestId"))
+                                }
+                        }
                 }
         }
 }
