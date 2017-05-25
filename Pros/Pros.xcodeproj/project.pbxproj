@@ -36,6 +36,8 @@
 		0168F9CE1ED3669100AC45EB /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168F9CD1ED3669100AC45EB /* String+Localized.swift */; };
 		0168F9D31ED36E2A00AC45EB /* Pro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168F9D21ED36E2A00AC45EB /* Pro.swift */; };
 		01851FF71ED6129800B5EC2E /* ProDetailsViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01851FF61ED6129800B5EC2E /* ProDetailsViewObject.swift */; };
+		019ADFC21ED7671A005C4C92 /* ProListViewObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ADFC11ED7671A005C4C92 /* ProListViewObjectTests.swift */; };
+		019ADFC41ED767D9005C4C92 /* ProDetailsViewObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ADFC31ED767D9005C4C92 /* ProDetailsViewObjectTests.swift */; };
 		01AD4DBA1ED3721300BEE589 /* ProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD4DB91ED3721300BEE589 /* ProTests.swift */; };
 		01BDE8621ED4C90F002E1F52 /* ProListViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BDE8611ED4C90F002E1F52 /* ProListViewObject.swift */; };
 		01C9C3B11ED37CE600E8C7A1 /* ProList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C9C3A81ED37CE600E8C7A1 /* ProList.storyboard */; };
@@ -117,6 +119,8 @@
 		0168F9CD1ED3669100AC45EB /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		0168F9D21ED36E2A00AC45EB /* Pro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pro.swift; sourceTree = "<group>"; };
 		01851FF61ED6129800B5EC2E /* ProDetailsViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsViewObject.swift; sourceTree = "<group>"; };
+		019ADFC11ED7671A005C4C92 /* ProListViewObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProListViewObjectTests.swift; sourceTree = "<group>"; };
+		019ADFC31ED767D9005C4C92 /* ProDetailsViewObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProDetailsViewObjectTests.swift; sourceTree = "<group>"; };
 		01AD4DB91ED3721300BEE589 /* ProTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProTests.swift; sourceTree = "<group>"; };
 		01BDE8611ED4C90F002E1F52 /* ProListViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProListViewObject.swift; sourceTree = "<group>"; };
 		01C9C3A81ED37CE600E8C7A1 /* ProList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProList.storyboard; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 				01229BD71ED4F25100CE3272 /* View Mocks */,
 				01229BA71ED4F1A100CE3272 /* ProDetails.storyboard */,
 				01851FF61ED6129800B5EC2E /* ProDetailsViewObject.swift */,
+				019ADFC31ED767D9005C4C92 /* ProDetailsViewObjectTests.swift */,
 			);
 			name = "User Interface";
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				01C9C3D81ED37D5400E8C7A1 /* View Mocks */,
 				01C9C3A81ED37CE600E8C7A1 /* ProList.storyboard */,
 				01BDE8611ED4C90F002E1F52 /* ProListViewObject.swift */,
+				019ADFC11ED7671A005C4C92 /* ProListViewObjectTests.swift */,
 				01229B981ED4D12000CE3272 /* ProCell.swift */,
 			);
 			name = "User Interface";
@@ -847,10 +853,12 @@
 				01229BCB1ED4F1AF00CE3272 /* ProDetailsPresenterToViewInterfaceMock.swift in Sources */,
 				01C9C3C91ED37CF300E8C7A1 /* ProListNavigationInterfaceMock.swift in Sources */,
 				01229BC71ED4F1AF00CE3272 /* ProDetailsInteractorToPresenterInterfaceMock.swift in Sources */,
+				019ADFC41ED767D9005C4C92 /* ProDetailsViewObjectTests.swift in Sources */,
 				01C9C3D01ED37CF300E8C7A1 /* ProListWireframeTests.swift in Sources */,
 				01AD4DBA1ED3721300BEE589 /* ProTests.swift in Sources */,
 				01229BCE1ED4F1AF00CE3272 /* ProDetailsWireframeInterfacesMock.swift in Sources */,
 				01229BCF1ED4F1AF00CE3272 /* ProDetailsWireframeTests.swift in Sources */,
+				019ADFC21ED7671A005C4C92 /* ProListViewObjectTests.swift in Sources */,
 				01C9C3CA1ED37CF300E8C7A1 /* ProListPresenterTests.swift in Sources */,
 				01C9C3C71ED37CF300E8C7A1 /* ProListInteractorTests.swift in Sources */,
 				013BC61D1ED4C0C60018F313 /* ProsServiceMock.swift in Sources */,
