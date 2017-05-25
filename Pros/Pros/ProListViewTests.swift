@@ -13,7 +13,8 @@ class ProListViewSpec: QuickSpec {
 
                 describe("a ProList view") {
                         beforeEach {
-                                view = ProListView()
+                                let sb = ProListWireframe.storyboard()
+                                view = (sb.instantiateViewController(withIdentifier: ProListConstants.viewIdentifier) as? ProListView)!
                                 presenterMock = ProListViewToPresenterInterfaceMock()
 
                                 _ = view.view
@@ -37,6 +38,66 @@ class ProListViewSpec: QuickSpec {
                                         // Assert
                                         expect(presenterMock.functionsCalled).to(contain("userSelected(proListViewObject:)"))
                                         expect(presenterMock.proListViewObject!.entityId).to(equal("TestId"))
+                                }
+                        }
+
+                        // MARK: - Cell Tests
+                        context("when there is a table view cell") {
+                                describe("for a pro with a rating above 4.0") {
+                                        it("shows the rating label in green") {
+                                                // Arrange
+                                                var testPro = Pro(withEntityId: "TestId")
+                                                testPro.ratingCount = "20"
+                                                testPro.compositeRating = "4.1"
+                                                let testProListViewObject = ProListViewObject(fromPro: testPro)
+
+                                                view.show(proListViewObjects: [ testProListViewObject ])
+
+                                                // Act
+                                                let testIndexPath = IndexPath(row: 0, section: 0)
+                                                let proCell = (view.tableView(view.tableView, cellForRowAt: testIndexPath) as? ProCell)!
+
+                                                // Assert
+                                                expect(proCell.ratingLabel.textColor).to(equal(UIColor.green))
+                                        }
+                                }
+
+                                describe("for a pro with a rating between 3.0 and 4.0") {
+                                        it("shows the rating label in orange") {
+                                                // Arrange
+                                                var testPro = Pro(withEntityId: "TestId")
+                                                testPro.ratingCount = "20"
+                                                testPro.compositeRating = "3.5"
+                                                let testProListViewObject = ProListViewObject(fromPro: testPro)
+
+                                                view.show(proListViewObjects: [ testProListViewObject ])
+
+                                                // Act
+                                                let testIndexPath = IndexPath(row: 0, section: 0)
+                                                let proCell = (view.tableView(view.tableView, cellForRowAt: testIndexPath) as? ProCell)!
+
+                                                // Assert
+                                                expect(proCell.ratingLabel.textColor).to(equal(UIColor.orange))
+                                        }
+                                }
+
+                                describe("for a pro with a rating below 3.0") {
+                                        it("shows the rating label in red") {
+                                                // Arrange
+                                                var testPro = Pro(withEntityId: "TestId")
+                                                testPro.ratingCount = "20"
+                                                testPro.compositeRating = "2.0"
+                                                let testProListViewObject = ProListViewObject(fromPro: testPro)
+
+                                                view.show(proListViewObjects: [ testProListViewObject ])
+
+                                                // Act
+                                                let testIndexPath = IndexPath(row: 0, section: 0)
+                                                let proCell = (view.tableView(view.tableView, cellForRowAt: testIndexPath) as? ProCell)!
+
+                                                // Assert
+                                                expect(proCell.ratingLabel.textColor).to(equal(UIColor.red))
+                                        }
                                 }
                         }
 
