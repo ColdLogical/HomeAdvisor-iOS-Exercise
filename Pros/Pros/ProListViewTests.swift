@@ -43,57 +43,70 @@ class ProListViewSpec: QuickSpec {
 
                         // MARK: - Cell Tests
                         context("when there is a table view cell") {
-                                describe("for a pro with a rating above 4.0") {
+                                // MARK: - Helper
+                                func cellForPro(withRating rating: String) -> ProCell {
+                                        var testPro = Pro(withEntityId: "TestId")
+                                        testPro.ratingCount = "20"
+                                        testPro.compositeRating = rating
+
+                                        let testProListViewObject = ProListViewObject(fromPro: testPro)
+
+                                        view.show(proListViewObjects: [ testProListViewObject ])
+                                        let testIndexPath = IndexPath(row: 0, section: 0)
+
+                                        let cell = (view.tableView(view.tableView, cellForRowAt: testIndexPath) as? ProCell)!
+
+                                        return cell
+                                }
+
+                                describe("for a pro with a rating 4.0 and above") {
                                         it("shows the rating label in green") {
                                                 // Arrange
-                                                var testPro = Pro(withEntityId: "TestId")
-                                                testPro.ratingCount = "20"
-                                                testPro.compositeRating = "4.1"
-                                                let testProListViewObject = ProListViewObject(fromPro: testPro)
-
-                                                view.show(proListViewObjects: [ testProListViewObject ])
+                                                let testRating = "4.0"
 
                                                 // Act
-                                                let testIndexPath = IndexPath(row: 0, section: 0)
-                                                let proCell = (view.tableView(view.tableView, cellForRowAt: testIndexPath) as? ProCell)!
+                                                let proCell = cellForPro(withRating: testRating)
 
                                                 // Assert
                                                 expect(proCell.ratingLabel.textColor).to(equal(UIColor.green))
                                         }
                                 }
 
-                                describe("for a pro with a rating between 3.0 and 4.0") {
-                                        it("shows the rating label in orange") {
-                                                // Arrange
-                                                var testPro = Pro(withEntityId: "TestId")
-                                                testPro.ratingCount = "20"
-                                                testPro.compositeRating = "3.5"
-                                                let testProListViewObject = ProListViewObject(fromPro: testPro)
+                                describe("for a pro with a rating between 3.0 and 3.99") {
+                                        context("when the rating is 3.0") {
+                                                it("shows the rating label in orange") {
+                                                        // Arrange
+                                                        let testRating = "3.0"
 
-                                                view.show(proListViewObjects: [ testProListViewObject ])
+                                                        // Act
+                                                        let proCell = cellForPro(withRating: testRating)
 
-                                                // Act
-                                                let testIndexPath = IndexPath(row: 0, section: 0)
-                                                let proCell = (view.tableView(view.tableView, cellForRowAt: testIndexPath) as? ProCell)!
+                                                        // Assert
+                                                        expect(proCell.ratingLabel.textColor).to(equal(UIColor.orange))
+                                                }
+                                        }
 
-                                                // Assert
-                                                expect(proCell.ratingLabel.textColor).to(equal(UIColor.orange))
+                                        context("when the rating is 3.99") {
+                                                it("shows the rating label in orange") {
+                                                        // Arrange
+                                                        let testRating = "3.99"
+
+                                                        // Act
+                                                        let proCell = cellForPro(withRating: testRating)
+
+                                                        // Assert
+                                                        expect(proCell.ratingLabel.textColor).to(equal(UIColor.orange))
+                                                }
                                         }
                                 }
 
                                 describe("for a pro with a rating below 3.0") {
                                         it("shows the rating label in red") {
                                                 // Arrange
-                                                var testPro = Pro(withEntityId: "TestId")
-                                                testPro.ratingCount = "20"
-                                                testPro.compositeRating = "2.0"
-                                                let testProListViewObject = ProListViewObject(fromPro: testPro)
-
-                                                view.show(proListViewObjects: [ testProListViewObject ])
+                                                let testRating = "2.99"
 
                                                 // Act
-                                                let testIndexPath = IndexPath(row: 0, section: 0)
-                                                let proCell = (view.tableView(view.tableView, cellForRowAt: testIndexPath) as? ProCell)!
+                                                let proCell = cellForPro(withRating: testRating)
 
                                                 // Assert
                                                 expect(proCell.ratingLabel.textColor).to(equal(UIColor.red))
@@ -129,5 +142,4 @@ class ProListViewSpec: QuickSpec {
                         }
                 }
         }
-}
-// swiftlint:disable:this file_length
+} // swiftlint:disable:next file_length
