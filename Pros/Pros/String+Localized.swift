@@ -2,13 +2,13 @@ import Foundation
 
 extension String {
         var localized: String {
-                return Localizator.sharedInstance.localize(string: self)
+                return Localizer.shared.localize(string: self)
         }
 }
 
-private class Localizator {
+private class Localizer {
 
-        static let sharedInstance = Localizator()
+        static let shared = Localizer()
 
         lazy var localizableInfo: [String: Any] = {
                 guard let path = Bundle.main.path(forResource: "Localizable", ofType: "plist"),
@@ -20,9 +20,11 @@ private class Localizator {
                 return dictionary
         }()
 
-        func localize(string: String) -> String {
+        func localize(string: String,
+                      locale: Locale = Locale.current) -> String {
                 guard let localizedInfo =  localizableInfo[string] as? [ String: Any ],
-                        let localizedString = localizedInfo["value"] as? String else {
+                        let localizedValues = localizedInfo["values"] as? [ String: String ],
+                        let localizedString = localizedValues[locale.identifier] else {
                                 assertionFailure("Missing translation for: \(string)")
                                 return ""
                 }
